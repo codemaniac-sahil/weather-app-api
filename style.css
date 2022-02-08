@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body{
+    font-family:Open-sans;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+}
+.navbar{
+    display: flex;
+    background-color: #242424;
+}
+.navbar img{
+    width: 5%;
+
+}
+.navlinks{
+    display: flex;
+    list-style: none;
+}
+.navlinks a{
+    text-decoration: none;
+    padding-left: 10px;
+    color: white;
+}
+.weather{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
+}
+.weather h1{
+    font-size: 60px;
+}
+.weather p{
+    font-size: 27px;
+}
+input[type="text"]{
+    border: 1;
+    padding: 10px 20px;
+    border-radius: 2px;
+}
+#tap{
+    cursor: pointer;
+    border: 0;
+    background-color: #4267A0;    ;
+    padding: 10px 20px;
+    border-radius: 3px;
+    color: white;
+    font-weight: bolder;
+    
+}
