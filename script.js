@@ -1,53 +1,29 @@
-function add_city(){
-let cityname=document.getElementById("data").value;
-api_url1="https://api.openweathermap.org/data/2.5/weather?q=";
-api_url2=cityname;
-api_url3="&appid=db8788ed4e52495bf8a51ae0a8e4caff&units=metric";
-full_api=api_url1+api_url2+api_url3;
-if (api_url2==''){
-    document.getElementById('use').innerHTML="<p>Please enter the city</p>";
-    document.getElementById('use1').innerText='';
-    document.getElementById('use2').innerText='';
+// https://newsapi.org/v2/top-headlines?country=in&apiKey=7ccf3b8406a94d028b1cd059f0c6d015
+async function getgeolocation(){
+    
+    let url='https://ipapi.co/json';
+    let response=await fetch(url)
+    let data = await response.json()
+    current_location=data.country_code
+    document.getElementById("country").innerHTML=data.country_name
+    async function getnews(){
+        url1='https://newsapi.org/v2/top-headlines?country='
+        url2=current_location+'&apiKey=7ccf3b8406a94d028b1cd059f0c6d015'
+        full_url=url1+url2;
+        console.log(full_url)
+        let response1=await fetch(full_url);
+        let data1=await response1.json()
+        for(var i=0;i<data1.articles.length;i++){
+            document.getElementById("news").innerHTML+=`<div class='img'><img src=${data1.articles[i].urlToImage}>
+            </div>
+            <div class='news'><p>${data1.articles[i].title} <a href='${data1.articles[i].url}'> Read full article</p>
+            
+            `
+        }
 
-
-}
-else{
-
-async function get_data(){
-const response=await fetch(full_api)
-const data=await response.json()
-tempe=data.main.temp;
-city=data.name;
-error=data.cod;
-weather_condition=data.weather[0].main;
-imp=`<p> City : ${city}</p>`;
-imp1=`<p> Weather condition : ${weather_condition}</p>`;
-imp2=`<p> ${tempe}&#8451</p>`;
-
-document.getElementById('use').innerHTML=imp;
-document.getElementById('use1').innerHTML=imp1;
-document.getElementById('use2').innerHTML=imp2;
-
-
-if(weather_condition=="Clouds"){
-    document.body.style="background-image:linear-gradient(lightblue,white);"
-}
-else if(weather_condition=="Thunderstorm"){
-    document.body.style="background-image:linear-gradient(white,gray);"
-}
-else if(weather_condition=="Rain"){
-    document.body.style="background-image:linear-gradient(lightblue,blue);"
-}
-else if(weather_condition=="Snow"){
-    document.body.style="background-image:linear-gradient(#edebeb , #fffcfc);"
-}
-else{
-    document.body.style="background-image:linear-gradient(#edebeb , #fffcfc)";
+    }
+   getnews()
+    
 }
 
-
-
-}
-get_data()
-}
-}
+getgeolocation()
