@@ -15,4 +15,8 @@ And for API requst call I used OpenWeatherAPI.
 2) Temperature
 3) Weather condition
 
-Website link : 
+Deployed using Netlify.
+
+You can test the website by clicking the link given below/
+
+Website link : https://elegant-hawking-69bc75.netlify.app
