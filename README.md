@@ -1,6 +1,6 @@
 # [Weather web-app](https://elegant-hawking-69bc75.netlify.app)
 
-![](/Screenshot.png)
+![](/Screenshot (29).png)
 It fetch the **weather forecast data from API of user entered city.**
 
 ##  Technology used : 
