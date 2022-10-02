@@ -1,22 +1,18 @@
-# Weather Web app
+# [Weather web-app](https://elegant-hawking-69bc75.netlify.app)
 
-It fetch the weather forecast data from API of user enetered city.
+![](/Screenshot.png)
+It fetch the **weather forecast data from API of user entered city.**
 
-# Languages used : 
-1) HTML
-2) CSS
-3) JavaScript
+##  Technology used : 
+- **HTML, CSS, JavaScript**
+- [OpenWeatherAPI](https://openweathermap.org/current) used for **API.**
 
-And for API requst call I used OpenWeatherAPI.
-
-# What it will show to the user :
-
-1) City Name
-2) Temperature
-3) Weather condition
+### What it will show to the user :
+- **City Name**
+- **Temperature**
+- **Weather condition**
 
 Deployed using Netlify.
 
-You can test the website by clicking the link given below/
-
+You can test the website by clicking the link given below \
 Website link : https://elegant-hawking-69bc75.netlify.app
