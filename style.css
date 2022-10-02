@@ -4,8 +4,8 @@ body{
     font-family:Open-sans;
     margin: 0;
     padding: 0;
-    height: 100vh;
-
+    background-attachment: scroll;
+    background-repeat: repeat;
 }
 .navbar{
     display: flex;
@@ -50,5 +50,7 @@ input[type="text"]{
     border-radius: 3px;
     color: white;
     font-weight: bolder;
-    
+}
+span {
+    height: auto;
 }

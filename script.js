@@ -49,19 +49,19 @@ document.getElementById('humidity').innerHTML=hum;
 document.getElementById('windSpeed').innerHTML=windSpd;
 
 if(weather_condition=="Clouds"){
-    document.body.style="background-image:linear-gradient(lightblue,white);"
+    document.body.style="background-image:repeating-linear-gradient(lightblue,white);"
 }
 else if(weather_condition=="Thunderstorm"){
-    document.body.style="background-image:linear-gradient(white,gray);"
+    document.body.style="background-image:repeating-linear-gradient(white,gray);"
 }
 else if(weather_condition=="Rain"){
-    document.body.style="background-image:linear-gradient(lightblue,blue);"
+    document.body.style="background-image:repeating-linear-gradient(lightblue,blue);"
 }
 else if(weather_condition=="Snow"){
-    document.body.style="background-image:linear-gradient(#edebeb , #fffcfc);"
+    document.body.style="background-image:repeating-linear-gradient(#edebeb , #fffcfc);"
 }
 else{
-    document.body.style="background-image:linear-gradient(#edebeb , #fffcfc)";
+    document.body.style="background-image:repeating-linear-gradient(#edebeb , #fffcfc)";
 }
 
 
