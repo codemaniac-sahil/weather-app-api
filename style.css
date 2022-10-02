@@ -83,17 +83,31 @@ input[type="text"]{
     color: white;
     font-weight: bolder;
 }
-span {
-    height: auto;
+
+.display-data p{
+    height: 2rem;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    width: 400px;
+    display: flex;
+    align-items: center;
 }
 
+.display-data b {
+    margin-right: 10px;
+    color: cornflowerblue;
+}
 
 .news-cards{
     width: 900px;
     min-height: 220px;
-    position: absolute;
+    /* position: absolute;
     bottom: 40px;
-    left: calc(50vw - 450px);
+    left: calc(50vw - 450px); */
+    margin: 100px auto 50px auto;
 }
 
 .news-cards .title{
