@@ -1,54 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+   
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather app</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <div class="navbar">
-        <img src="https://www.iblsoft.com/wp-content/uploads/2019/10/IBL_logo_OpenWeather.png" alt="logo">
+        <img src="cloud-weather-svgrepo-com.svg" alt="logo">
         <ul class="navlinks">
-            <li><a href="https://focused-chandrasekhar-fd1fdc.netlify.app/">Digital clock</a></li>
-            <li><a href="https://quizzical-goldstine-706e61.netlify.app/">Stopwatch</a></li>
-            <li><a href="https://angry-hodgkin-eb3dce.netlify.app/">TODO list</a></li>
+            <li><a href="https://focused-chandrasekhar-fd1fdc.netlify.app/
+">Digital clock</a></li>
+            <li><a href="https://quizzical-goldstine-706e61.netlify.app/
+">Stopwatch</a></li>
+            <li><a href="https://angry-hodgkin-eb3dce.netlify.app/
+">TODO list</a></li>
         </ul>
 
     </div>
     <div class="weather">
         <h1>Weather app</h1>
-        <div class="input-data">
-            <input type="text" id="data" size="30" placeholder="Please enter your city . . ."><br>
-            <button id="tap" onclick="add_city()">Search</button>
-        </div>
+        <input type="text" id="data" size="30"><br>
+        <button id="tap" onclick="add_city()" >Search</button>
         <br>
-        <span id="cityName"></span>
-        <span id="weatherCondition"></span>
-        <span id="temperature"></span>
-        <span id="pressure"></span>
-        <span id="humidity"></span>
-        <span id="windSpeed"></span>
+      <span id="cityName"></span>
+      <span id="weatherCondition"></span>
+      <span id="temperature"></span>
+      <span id="pressure"></span>
+      <span id="humidity"></span>
+      <span id="windSpeed"></span>
     </div>
-
-
-
-    <div class="news-cards">
-        <div class="title">Top Stories</div>
-        <div class="cards-holder">
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-        </div>
-    </div>
-
-
-
-    <script src="script.js"></script>
-
+    <script src="script.js">
+        
+    </script>
+   
 </body>
-
 </html>
