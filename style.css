@@ -1,29 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*, ::after, ::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
 
 body{
-    font-family:Open-sans;
-    margin: 0;
-    padding: 0;
     background-attachment: scroll;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-color: #f9f7f7;
 }
 .navbar{
     display: flex;
-    background-color: #242424;
+    background-color: #7b5a84;
+    align-items: center;
+    height: 72px;
+    justify-content: space-between;
+    padding: 0 10px;
 }
-.navbar img{
-    width: 5%;
 
+.navbar img{
+    max-height: 80%;
 }
+
 .navlinks{
     display: flex;
     list-style: none;
 }
 .navlinks a{
     text-decoration: none;
-    padding-left: 10px;
+    background-color: #9d7ca5;
+    margin: 0 5px;
+    padding: 2.5px 5px;
+    font-size: 0.85rem;
+    border-radius: 5px;
     color: white;
 }
+
 .weather{
     display: flex;
     flex-direction: column;
@@ -31,21 +47,37 @@ body{
     justify-content: center;
     margin-top: 35px;
 }
+
 .weather h1{
-    font-size: 60px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: cornflowerblue;
+    margin: 40px 0 20px 0px;
 }
 .weather p{
     font-size: 27px;
 }
+
+.input-data{
+    display: flex;
+    flex-direction: row;
+}
+
 input[type="text"]{
     border: 1;
     padding: 10px 20px;
     border-radius: 2px;
+    margin-right: 1rem;
+    border-radius: 3px;
+    width: 40vw;
+    border: 1px solid cornflowerblue;
 }
+
 #tap{
     cursor: pointer;
     border: 0;
-    background-color: #4267A0;    ;
+    background-color: cornflowerblue;    
     padding: 10px 20px;
     border-radius: 3px;
     color: white;
@@ -53,4 +85,36 @@ input[type="text"]{
 }
 span {
     height: auto;
+}
+
+
+.news-cards{
+    width: 900px;
+    min-height: 220px;
+    position: absolute;
+    bottom: 40px;
+    left: calc(50vw - 450px);
+}
+
+.news-cards .title{
+    font-size: 0.85rem;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: cornflowerblue;
+    display: inline-block;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.news-cards .cards-holder{
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.news-cards .card{
+    height: 100%;
+    background-color: pink;
+    width: 32%;
+    border-radius: 5px;
 }
