@@ -11,6 +11,9 @@ It fetch the **weather forecast data from API of user entered city.**
 - **City Name**
 - **Temperature**
 - **Weather condition**
+- **Pressure**
+- **Humidity**
+- **Wind Speed**
 
 Deployed using Netlify.
 
