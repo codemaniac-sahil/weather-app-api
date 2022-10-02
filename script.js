@@ -1,7 +1,13 @@
 document.getElementById("data").addEventListener("keyup", function (event) {
   event.preventDefault();
+  let input = document.getElementById("data");
   if (event.keyCode === 13) {
+    if(input.value == ""){
+      alert("Enter city name!!")
+    }else{
     document.getElementById("tap").click();
+   input.blur();
+  }
   }
 });
 
@@ -13,12 +19,7 @@ function add_city() {
   full_api = api_url1 + api_url2 + api_url3; //Generating URL for entered city
 
   //If user did not input the city
-  if (api_url2 == "") {
-    document.getElementById("cityName").innerHTML =
-      "<p>Please enter the city</p>";
-    document.getElementById("weatherCondition").innerText = "";
-    document.getElementById("temperature").innerText = "";
-  } else {
+  
     async function get_data() {
       const response = await fetch(full_api); //Fetching data from API
       const data = await response.json(); //Converting data to json format
@@ -62,5 +63,5 @@ function add_city() {
       }
     }
     get_data();
-  }
 }
+
