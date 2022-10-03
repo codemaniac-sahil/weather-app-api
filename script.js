@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 document.getElementById("data").addEventListener("keyup", function (event) {
   event.preventDefault();
   let input = document.getElementById("data");
@@ -13,9 +15,9 @@ document.getElementById("data").addEventListener("keyup", function (event) {
 
 function add_city() {
   let cityname = document.getElementById("data").value; //Getting city name from user
-  api_url1 = "https://api.openweathermap.org/data/2.5/weather?q=";
+  api_url1 = process.env.API_URL1;
   api_url2 = cityname;
-  api_url3 = "&appid=db8788ed4e52495bf8a51ae0a8e4caff&units=metric";
+  api_url3 = process.env.API_URL3;
   full_api = api_url1 + api_url2 + api_url3; //Generating URL for entered city
 
   //If user did not input the city
