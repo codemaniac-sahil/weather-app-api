@@ -63,7 +63,14 @@ function add_city() {
           "background-image:repeating-linear-gradient(#edebeb , #fffcfc)";
       }
     } catch (err) {
-      alert("City not found");
+      document.getElementById("cityName").innerHTML = `<p style="color: red; font-weight: bolder">Error fetching data</b></p>`;
+      document.getElementById("weatherCondition").innerHTML = '';
+      document.getElementById("temperature").innerHTML = '';
+      document.getElementById("pressure").innerHTML = '';
+      document.getElementById("humidity").innerHTML = '';
+      document.getElementById("windSpeed").innerHTML = '';
+      document.body.style =
+        "background-image:repeating-linear-gradient(#edebeb , #fffcfc)";
     }
   }
   get_data();
