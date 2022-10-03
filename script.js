@@ -2,12 +2,12 @@ document.getElementById("data").addEventListener("keyup", function (event) {
   event.preventDefault();
   let input = document.getElementById("data");
   if (event.keyCode === 13) {
-    if(input.value == ""){
+    if (input.value == "") {
       alert("Enter city name!!")
-    }else{
-    document.getElementById("tap").click();
-   input.blur();
-  }
+    } else {
+      document.getElementById("tap").click();
+      input.blur();
+    }
   }
 });
 
@@ -19,8 +19,9 @@ function add_city() {
   full_api = api_url1 + api_url2 + api_url3; //Generating URL for entered city
 
   //If user did not input the city
-  
-    async function get_data() {
+
+  async function get_data() {
+    try {
       const response = await fetch(full_api); //Fetching data from API
       const data = await response.json(); //Converting data to json format
       tempe = data.main.temp;
@@ -61,7 +62,10 @@ function add_city() {
         document.body.style =
           "background-image:repeating-linear-gradient(#edebeb , #fffcfc)";
       }
+    } catch (err) {
+      alert("City not found");
     }
-    get_data();
+  }
+  get_data();
 }
 
