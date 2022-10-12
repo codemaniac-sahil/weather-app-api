@@ -40,6 +40,10 @@ body{
     color: white;
 }
 
+.text-center{
+    text-align: center;
+}
+
 .weather{
     display: flex;
     flex-direction: column;
