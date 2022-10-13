@@ -7,6 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather app</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        #tap:hover{
+            background-color: rgb(14, 15, 14);
+            color: rgb(245, 240, 240);
+        }
+    </style>
 </head>
 
 <body>
@@ -23,7 +30,7 @@
         <h1>Weather app</h1>
         <div class="input-data">
             <input type="text" id="data" size="30" placeholder="Please enter your city . . ."><br>
-            <button id="tap" onclick="add_city()">Search</button>
+            <button id="tap" onclick="add_city()" >Search </button>
         </div>
         <br>
         <div class="display-data" id="cityName"></div>
