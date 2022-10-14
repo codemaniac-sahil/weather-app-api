@@ -88,11 +88,16 @@ input[type="text"]{
     font-weight: bolder;
 }
 
-.display-data p{
-    height: 2rem;
+.dispaly-data-container {    
     background-color: white;
+    border-radius: 12px;
+    border: 2px solid rgb(123, 90, 132, 0.4);
+    padding: 12px;
+    box-shadow: 6px 3px 3px 3px rgb(123, 90, 132, 0.7);
+}
+
+.display-data p{
     padding: 5px 10px;
-    border-radius: 5px;
     font-size: 1rem;
     margin-bottom: 10px;
     width: 400px;
