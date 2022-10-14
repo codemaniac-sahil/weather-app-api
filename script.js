@@ -24,6 +24,8 @@ function add_city() {
     alert("Enter city name!!")
   } else {
     async function get_data() {
+        const resultContainer = document.getElementById('dispaly-data-container');
+        resultContainer.classList.add('dispaly-data-container');
       try {
         const response = await fetch(full_api); //Fetching data from API
         const data = await response.json(); //Converting data to json format
@@ -34,7 +36,6 @@ function add_city() {
         pressure = data.main.pressure;
         humidity = data.main.humidity;
         windSpeed = data.wind.speed;
-
         cityName = `<p> <b>City :</b> ${city}, ${country}</p>`;
         weatCond = `<p> <b>Weather condition :</b> ${weather_condition}</p>`;
         temp = `<p> <b>Temperature :</b> ${tempe}&#8451</p>`;
@@ -80,3 +81,7 @@ function add_city() {
   }
 }
 
+window.onload = function() {    
+    const resultContainer = document.getElementById('dispaly-data-container');
+    resultContainer.classList.remove('dispaly-data-container');
+};
