@@ -1,36 +1,171 @@
-@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Moon+Dance&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-*, ::after, ::before{
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #333;
 }
 
-body{
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-    background-color: #f9f7f7;
+body {
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-color: #f9f7f7;
 }
-.navbar{
+.navbar {
+  display: flex;
+  background-color: #7b5a84;
+  align-items: center;
+  height: 72px;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.navbar img {
+  max-height: 80%;
+}
+
+.navlinks {
+  display: flex;
+  list-style: none;
+}
+.navlinks a {
+  text-decoration: none;
+  background-color: #9d7ca5;
+  margin: 0 5px;
+  padding: 2.5px 5px;
+  font-size: 0.85rem;
+  border-radius: 5px;
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.weather h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: cornflowerblue;
+  margin: 40px 0 20px 0px;
+}
+.weather p {
+  font-size: 27px;
+}
+
+.input-data {
+  display: flex;
+  flex-direction: row;
+}
+
+input[type="text"] {
+  border: 1;
+  padding: 10px 20px;
+  border-radius: 2px;
+  margin-right: 1rem;
+  border-radius: 3px;
+  width: 40vw;
+  border: 1px solid cornflowerblue;
+}
+
+#tap {
+  cursor: pointer;
+  border: 0;
+  background-color: cornflowerblue;
+  padding: 10px 20px;
+  border-radius: 3px;
+  color: white;
+  font-weight: bolder;
+}
+
+.dispaly-data-container {
+  background-color: white;
+  border-radius: 12px;
+  border: 2px solid rgb(123, 90, 132, 0.4);
+  padding: 12px;
+  box-shadow: 6px 3px 3px 3px rgb(123, 90, 132, 0.7);
+}
+
+.display-data p {
+  padding: 5px 10px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.display-data b {
+  margin-right: 10px;
+  color: cornflowerblue;
+}
+
+.news-cards {
+  width: 90vw;
+  max-width: 900px;
+  min-height: 220px;
+  /* position: absolute;
+    bottom: 40px;
+    left: calc(50vw - 450px); */
+  margin: 100px auto 50px auto;
+}
+
+.news-cards .title {
+  font-size: 0.85rem;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: cornflowerblue;
+  display: inline-block;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.news-cards .cards-holder {
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.news-cards .card {
+  height: 100%;
+  background-color: pink;
+  width: 32%;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
     display: flex;
+    flex-direction: column;
     background-color: #7b5a84;
     align-items: center;
     height: 72px;
     justify-content: space-between;
     padding: 0 10px;
-}
+  }
 
-.navbar img{
-    max-height: 80%;
-}
+  .navbar img {
+    max-height: 95%;
+  }
 
-.navlinks{
+  .navlinks {
     display: flex;
     list-style: none;
-}
-.navlinks a{
+    margin-top: 10px;
+  }
+  .navlinks a {
     text-decoration: none;
     background-color: #9d7ca5;
     margin: 0 5px;
@@ -38,222 +173,92 @@ body{
     font-size: 0.85rem;
     border-radius: 5px;
     color: white;
-}
+  }
 
-.text-center{
-    text-align: center;
-}
-
-.weather{
+  .weather {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 35px;
-}
+  }
 
-.weather h1{
+  .weather h1 {
     font-size: 2.5rem;
     text-transform: uppercase;
     font-weight: 700;
     color: cornflowerblue;
-    margin: 40px 0 20px 0px;
-}
-.weather p{
-    font-size: 27px;
-}
+    margin: 60px 0 20px 0px;
+  }
 
-.input-data{
+  .weather p {
+    font-size: 27px;
+  }
+
+  .input-data {
     display: flex;
     flex-direction: row;
-}
+  }
 
-input[type="text"]{
+  input[type="text"] {
     border: 1;
     padding: 10px 20px;
     border-radius: 2px;
-    margin-right: 1rem;
+    margin-right: 0.25rem;
     border-radius: 3px;
-    width: 40vw;
+    width: calc(90vw - 100px);
     border: 1px solid cornflowerblue;
-}
+  }
 
-#tap{
+  #tap {
     cursor: pointer;
     border: 0;
-    background-color: cornflowerblue;    
+    background-color: cornflowerblue;
     padding: 10px 20px;
     border-radius: 3px;
     color: white;
     font-weight: bolder;
-}
+  }
 
-.dispaly-data-container {    
+  .display-data p {
+    height: 2rem;
     background-color: white;
-    border-radius: 12px;
-    border: 2px solid rgb(123, 90, 132, 0.4);
-    padding: 12px;
-    box-shadow: 6px 3px 3px 3px rgb(123, 90, 132, 0.7);
-}
-
-.display-data p{
     padding: 5px 10px;
+    border-radius: 5px;
     font-size: 1rem;
     margin-bottom: 10px;
-    width: 400px;
+    width: 90vw;
     display: flex;
     align-items: center;
-}
+  }
 
-.display-data b {
+  .display-data b {
     margin-right: 10px;
     color: cornflowerblue;
-}
+  }
 
-.news-cards{
-    width: 90vw;
-    max-width: 900px;
-    min-height: 220px;
-    /* position: absolute;
-    bottom: 40px;
-    left: calc(50vw - 450px); */
-    margin: 100px auto 50px auto;
-}
-
-.news-cards .title{
-    font-size: 0.85rem;
-    padding: 5px;
-    border-radius: 4px;
-    background-color: cornflowerblue;
-    display: inline-block;
-    color: white;
-    margin-bottom: 10px;
-}
-
-.news-cards .cards-holder{
-    height: 200px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.news-cards .card{
-    height: 100%;
-    background-color: pink;
-    width: 32%;
-    border-radius: 5px;
-}
-
-@media screen and (max-width: 480px){
-    .navbar{
-        display: flex;
-        flex-direction: column;
-        background-color: #7b5a84;
-        align-items: center;
-        height: 72px;
-        justify-content: space-between;
-        padding: 0 10px;
-    }
-    
-    .navbar img{
-        max-height: 95%;
-    }
-    
-    .navlinks{
-        display: flex;
-        list-style: none;
-        margin-top: 10px;
-    }
-    .navlinks a{
-        text-decoration: none;
-        background-color: #9d7ca5;
-        margin: 0 5px;
-        padding: 2.5px 5px;
-        font-size: 0.85rem;
-        border-radius: 5px;
-        color: white;
-    }
-    
-    .weather{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 35px;
-    }
-    
-    .weather h1{
-        font-size: 2.5rem;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: cornflowerblue;
-        margin: 60px 0 20px 0px;
-    }
-
-    .weather p{
-        font-size: 27px;
-    }
-    
-    .input-data{
-        display: flex;
-        flex-direction: row;
-    }
-    
-    input[type="text"]{
-        border: 1;
-        padding: 10px 20px;
-        border-radius: 2px;
-        margin-right: 0.25rem;
-        border-radius: 3px;
-        width: calc(90vw - 100px);
-        border: 1px solid cornflowerblue;
-    }
-    
-    #tap{
-        cursor: pointer;
-        border: 0;
-        background-color: cornflowerblue;    
-        padding: 10px 20px;
-        border-radius: 3px;
-        color: white;
-        font-weight: bolder;
-    }
-
-    
-    .display-data p{
-        height: 2rem;
-        background-color: white;
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 1rem;
-        margin-bottom: 10px;
-        width: 90vw;
-        display: flex;
-        align-items: center;
-    }
-    
-    .display-data b {
-        margin-right: 10px;
-        color: cornflowerblue;
-    }
-    
-    .news-cards{
-        display: none;
-    }
+  .news-cards {
+    display: none;
+  }
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: #7b5a84;
-    padding: 8px;
+  align-items: center;
+  width: 100%;
+  background-color: #7b5a84;
+  padding: 8px;
 }
 
 footer p {
-    color: white;
-    font-weight: 500;
+  color: white;
+  font-weight: 500;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
 }
