@@ -22,18 +22,9 @@ body{
     padding: 0 10px;
     box-shadow: 0px 5px 80px 1px rgb(7, 3, 55);
     opacity: 0.90;
+    position: sticky;
+	top: 0;
 }
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  
-  
-  .sticky + .content {
-    padding-top: 60px;
-  }
-  
 
 .navbar img{
     max-height: 80%;
@@ -230,6 +221,7 @@ input[type="text"]{
         width: calc(90vw - 100px);
         border: 1px solid rgb(5, 45, 73);
     }
+    
     
     #tap{
         cursor: pointer;
