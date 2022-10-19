@@ -18,7 +18,7 @@ It fetch the **weather forecast data from API of user entered city.**
 Deployed using Netlify.
 
 You can test the website by clicking the link given below \
-Website link : https://elegant-hawking-69bc75.netlify.app
+Website link : https://weather-web-app-js.netlify.app/
 
 # Thanks to all Contributors
 
