@@ -1,4 +1,8 @@
-# [Weather web-app](https://elegant-hawking-69bc75.netlify.app)
+ # [Weather web-app](https://elegant-hawking-69bc75.netlify.app)
+![Issues](https://img.shields.io/github/issues/codemaniac-sahil/weather-app-api?color=brightgreen)
+![Pull requests](https://img.shields.io/github/issues-pr/codemaniac-sahil/weather-app-api?color=brigthgreen)
+![forks](https://img.shields.io/github/forks/codemaniac-sahil/weather-app-api)
+![stars](https://img.shields.io/github/stars/codemaniac-sahil/weather-app-api)
 
 ![](/Screenshot.png)
 It fetch the **weather forecast data from API of user entered city.**
