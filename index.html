@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        #tap:hover {
+        #tap:hover{
             background-color: rgb(14, 15, 14);
             color: rgb(245, 240, 240);
         }
@@ -18,51 +18,51 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="navbar">
-            <img src="https://www.iblsoft.com/wp-content/uploads/2019/10/IBL_logo_OpenWeather.png" alt="logo">
-            <ul class="navlinks">
-                <li><a href="https://focused-chandrasekhar-fd1fdc.netlify.app/">Digital clock</a></li>
-                <li><a href="https://quizzical-goldstine-706e61.netlify.app/">Stopwatch</a></li>
-                <li><a href="https://angry-hodgkin-eb3dce.netlify.app/">TODO list</a></li>
-            </ul>
-
-        </div>
-        <main>
-            <div class="weather">
-                <h1>Weather app</h1>
-                <div class="input-data">
-                    <input type="text" id="data" size="30" placeholder="Please enter your city . . ."><br>
-                    <button id="tap" onclick="add_city()">Search </button>
-                </div>
-                <br>
-                <div class="dispaly-data-container" id="dispaly-data-container">
-                    <div class="display-data" id="cityName"></div>
-                    <div class="display-data" id="weatherCondition"></div>
-                    <div class="display-data" id="temperature"></div>
-                    <div class="display-data" id="pressure"></div>
-                    <div class="display-data" id="humidity"></div>
-                    <div class="display-data" id="windSpeed"></div>
-                </div>
-            </div>
-
-
-
-            <div class="news-cards">
-                <div class="title">Top Stories</div>
-                <div class="cards-holder">
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                </div>
-            </div>
-        </main>
-        <footer>
-            <p class="text-center">Copyright &copy; 2022 OpenWeather.com</p>
-        </footer>
-
-
+    <div class="navbar" id="navbar">
+        <img src="https://www.iblsoft.com/wp-content/uploads/2019/10/IBL_logo_OpenWeather.png" alt="logo">
+        <ul class="navlinks">
+            <li class="nav-item"><a href="https://focused-chandrasekhar-fd1fdc.netlify.app/" class="nav-link">Digital clock</a></li>
+            <li class="nav-item"><a href="https://quizzical-goldstine-706e61.netlify.app/" class="nav-link">Stopwatch</a></li>
+            <li class="nav-item"><a href="https://angry-hodgkin-eb3dce.netlify.app/" class="nav-link">TODO list</a></li>
+        </ul>
+      
     </div>
+    <div class="weather">
+        <h1>Weather app</h1>
+        <div class="input-data">
+            <input type="text" id="data" size="30" placeholder="Please enter your city . . ."><br>
+            <button id="tap" onclick="add_city()" >Search </button>
+        </div>
+        <br>
+        <div class="display-data-container" id="display-data-container">
+            <div class="display-data" id="cityName"></div>
+            <div class="display-data" id="weatherCondition"></div>
+            <div class="display-data" id="temperature"></div>
+            <div class="display-data" id="pressure"></div>
+            <div class="display-data" id="humidity"></div>
+            <div class="display-data" id="windSpeed"></div>
+        </div>
+    </div>
+
+
+
+    <div class="news-cards">
+        <div class="title">Top Stories</div>
+        <div class="cards-holder">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+        </div>
+    </div>
+
+    <button onclick="TopFunc()" id="btn1" title="Go to top" >Top</button>
+
+    <footer>
+        <p class="text-center">Copyright &copy; 2022 OpenWeather.com</p>
+    </footer>
+
+
+
     <script src="script.js"></script>
 
 </body>

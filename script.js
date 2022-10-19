@@ -1,3 +1,4 @@
+
 document.getElementById("data").addEventListener("keyup", function (event) {
   event.preventDefault();
   let input = document.getElementById("data");
@@ -24,8 +25,8 @@ function add_city() {
     alert("Enter city name!!")
   } else {
     async function get_data() {
-        const resultContainer = document.getElementById('dispaly-data-container');
-        resultContainer.classList.add('dispaly-data-container');
+        const resultContainer = document.getElementById('display-data-container');
+        resultContainer.classList.add('display-data-container');
       try {
         const response = await fetch(full_api); //Fetching data from API
         const data = await response.json(); //Converting data to json format
@@ -80,8 +81,20 @@ function add_city() {
     get_data();
   }
 }
+let mybutton1 = document.getElementById("btn1");
+window.onscroll = function(){
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton1.style.display = "block";
+  } else {
+    mybutton1.style.display = "none";
+  }
+}
+function TopFunc() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
+}
 
 window.onload = function() {    
-    const resultContainer = document.getElementById('dispaly-data-container');
-    resultContainer.classList.remove('dispaly-data-container');
+    const resultContainer = document.getElementById('display-data-container');
+    resultContainer.classList.remove('display-data-container');
 };
