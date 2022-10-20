@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Moon+Dance&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 *, ::after, ::before{
   margin: 0;
@@ -8,7 +10,12 @@
   color: #333;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
+    scroll-behavior: smooth;
     background-attachment: scroll;
     background-repeat: no-repeat;
     background-image: linear-gradient(rgb(192, 239, 247),rgb(101, 165, 199),rgb(16, 2, 33));
@@ -20,7 +27,7 @@ body{
     height: 72px;
     justify-content: space-between;
     padding: 0 10px;
-    box-shadow: 0px 5px 80px 1px rgb(7, 3, 55);
+    /* box-shadow: 0px 5px 80px 1px rgb(7, 3, 55); */
     opacity: 0.90;
     position: sticky;
 	top: 0;
@@ -61,12 +68,12 @@ body{
 
 .weather h1{
     font-size: 3.5rem;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-weight: 700;
     color: rgb(0, 3, 8);
     margin: 40px 0 20px 0px;
-    font-family: Gill Sans;
-    text-shadow: 2px 2px 5px rgb(15, 53, 65);
+    font-family: 'Poppins', sans-serif;
+    /* text-shadow: 2px 2px 5px rgb(15, 53, 65); */
 }
 .weather p{
     font-size: 27px;
@@ -78,22 +85,27 @@ body{
 }
 
 input[type="text"]{
-    border: 1;
+    border: 0px !important;
     padding: 10px 20px;
-    border-radius: 2px;
-    margin-right: 1rem;
-    border-radius: 30px;
+    margin-right: 0;
+    border-radius: 30px 0px 0px 30px;
     box-shadow: 5px 15px 80px 0px rgb(138, 202, 213);
     width: 40vw;
     border: 1px solid rgb(5, 45, 73);
+    font-size: 1rem; 
+}
+
+input:focus {
+    outline: none;
 }
 
 #tap{
     cursor: pointer;
     border: 0;
-    background-color: rgb(6, 25, 60);    
-    padding: 10px 20px;
-    border-radius: 30px;
+    background-color: rgb(6, 25, 60);
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 0px 30px 30px 0px;
     box-shadow: 5px 15px 80px 0px rgb(211, 233, 237);
     color: white;
     font-weight: bolder;
@@ -102,9 +114,10 @@ input[type="text"]{
 .display-data-container {    
     background-color: rgb(201, 233, 248);
     border-radius: 12px;
-    border: 2px solid rgba(9, 0, 11, 0.4);
+    margin: 2rem;
+    /* border: 1px solid rgba(9, 0, 11, 0.4); */
     padding: 12px;
-    box-shadow: 4px 3px 6px 1px rgba(69, 74, 80, 0.7);
+    /* box-shadow: 4px 3px 6px 1px rgba(69, 74, 80, 0.7); */
 }
 
 .display-data p{
@@ -261,14 +274,15 @@ input[type="text"]{
 }
 
 #btn1{
-     display: none;  
+  display: none;  
   position: fixed; 
   bottom: 35px; 
   right: 30px; 
   z-index: 99; 
   border: none; 
   outline: none; 
-  background-color: rgb(6, 48, 23); 
+  background-color: #070329;
+  opacity: 0.90;
   color: white; 
   cursor: pointer; 
   padding: 15px; 
