@@ -37,12 +37,14 @@ function add_city() {
         pressure = data.main.pressure;
         humidity = data.main.humidity;
         windSpeed = data.wind.speed;
+        
         cityName = `<p> <b>City :</b> ${city}, ${country}</p>`;
         weatCond = `<p> <b>Weather condition :</b> ${weather_condition}</p>`;
         temp = `<p> <b>Temperature :</b> ${tempe}&#8451</p>`;
         press = `<p> <b>Pressure :</b> ${pressure} hPa</p>`;
         hum = `<p> <b>Humidity :</b> ${humidity}%</p>`;
         windSpd = `<p> <b>Wind speed :</b> ${windSpeed}</p>`;
+        place = `<p> <b>Weather in </b> ${city}</p>`;
 
         document.getElementById("cityName").innerHTML = cityName;
         document.getElementById("weatherCondition").innerHTML = weatCond;
@@ -50,6 +52,7 @@ function add_city() {
         document.getElementById("pressure").innerHTML = press;
         document.getElementById("humidity").innerHTML = hum;
         document.getElementById("windSpeed").innerHTML = windSpd;
+        document.getElementById("plc").innerHTML = place;
 
         // if (weather_condition == "Clouds") {
         //   document.body.style =
