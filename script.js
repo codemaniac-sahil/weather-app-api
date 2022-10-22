@@ -71,7 +71,7 @@ function add_city() {
         //     "background-image:repeating-linear-gradient(#edebeb , #fffcfc)";
         // }
       } catch (err) {
-        document.getElementById("cityName").innerHTML = `<p style="color: red; font-weight: bolder">Error fetching data</b></p>`;
+        document.getElementById("cityName").innerHTML = `<p style="color: red; font-weight: bolder; display:flex; justify-content: center;">Please enter a valid location</b></p>`;
         document.getElementById("weatherCondition").innerHTML = '';
         document.getElementById("temperature").innerHTML = '';
         document.getElementById("pressure").innerHTML = '';
