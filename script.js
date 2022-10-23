@@ -54,22 +54,25 @@ function add_city() {
         document.getElementById("windSpeed").innerHTML = windSpd;
         document.getElementById("plc").innerHTML = place;
 
-        // if (weather_condition == "Clouds") {
-        //   document.body.style =
-        //     "background-image:repeating-linear-gradient(lightblue,white);";
-        // } else if (weather_condition == "Thunderstorm") {
-        //   document.body.style =
-        //     "background-image:repeating-linear-gradient(white,gray);";
-        // } else if (weather_condition == "Rain") {
-        //   document.body.style =
-        //     "background-image:repeating-linear-gradient(lightblue,blue);";
-        // } else if (weather_condition == "Snow") {
-        //   document.body.style =
-        //     "background-image:repeating-linear-gradient(#edebeb , #fffcfc);";
-        // } else {
-        //   document.body.style =
-        //     "background-image:repeating-linear-gradient(#edebeb , #fffcfc)";
-        // }
+        if (weather_condition == "Clouds") {
+          document.body.style =
+            "background-image:repeating-linear-gradient(lightblue,white); ";
+        } else if (weather_condition == "Thunderstorm") {
+          document.body.style =
+            "background-image:repeating-linear-gradient(white,gray);";
+        } else if (weather_condition == "Rain") {
+          document.body.style =
+            "background-image:repeating-linear-gradient(lightblue,darkblue);";
+        } else if (weather_condition == "Snow") {
+          document.body.style =
+            "background-image:repeating-linear-gradient(#edebeb , #fffcfc);";
+        } else if (weather_condition == "Clear"){
+        document.body.style =
+        "background-image:repeating-linear-gradient(rgb(234,232,1),rgb(252,245,237));";
+        }else {
+          document.body.style =
+            "background-image:repeating-linear-gradient(#edebeb , #fffcfc)";
+        }
       } catch (err) {
         document.getElementById("cityName").innerHTML = `<p style="color: red; font-weight: bolder; display:flex; justify-content: center;">Please enter a valid location</b></p>`;
         document.getElementById("weatherCondition").innerHTML = '';
@@ -100,4 +103,20 @@ function TopFunc() {
 window.onload = function() {    
     const resultContainer = document.getElementById('display-data-container');
     resultContainer.classList.remove('display-data-container');
+};
+var tog=document.getElementById("theme-toggle");
+var stheme= localStorage.getItem('theme')||(window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+if (stheme)
+    document.documentElement.setAttribute('data-theme', stheme)
+tog.onclick=function toggle(){
+    var ctheme = document.documentElement.getAttribute("data-theme");
+    var targetTheme = "light";
+    if (ctheme === "light") {
+        targetTheme = "dark";
+    }
+    else if (ctheme === "dark"){
+        targetTheme = "light";
+    }
+    document.documentElement.setAttribute('data-theme', targetTheme)
+    localStorage.setItem('theme', targetTheme);
 };
